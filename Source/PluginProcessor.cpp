@@ -22,7 +22,9 @@ GainvstAudioProcessor::GainvstAudioProcessor()
                        )
 #endif
 {
-    addParameter(gainParameter = new juce::AudioParameterFloat("gain", "Gain", 0.0f, 2.0f, 1.0f));
+    // Add gain parameter with linear range (0.0 = silence, 0.5 = half volume, 1.0 = normal volume, 2.0 = double volume)
+    addParameter(gainParameter = new juce::AudioParameterFloat("gain", "Gain", 
+        0.0f, 2.0f, 1.0f));
 }
 
 GainvstAudioProcessor::~GainvstAudioProcessor()
@@ -145,20 +147,16 @@ void GainvstAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
 
-    float gain = gainParameter->get();
+    // Get linear gain value directly from parameter
+    float linearGain = gainParameter->get();
     
-    // This is the place where you'd normally do the guts of your plugin's
-    // audio processing...
-    // Make sure to reset the state if your inner loop is processing
-    // the samples and the outer loop is handling the channels.
-    // Alternatively, you can process the samples with the channels
-    // interleaved by keeping the same state.
+    // Apply linear gain to each sample
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
         auto* channelData = buffer.getWritePointer (channel);
         for (int sample = 0; sample < buffer.getNumSamples(); ++sample)
         {
-            channelData[sample] *= gain;
+            channelData[sample] *= linearGain;
         }
     }
 }

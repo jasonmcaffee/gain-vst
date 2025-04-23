@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /Users/jason/Documents/dev/gain-vst/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/local/bin/ctest $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -227,12 +237,52 @@ juce_vst3_helper/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/juce_vst3_helper.dir/build.make CMakeFiles/juce_vst3_helper.dir/build
 .PHONY : juce_vst3_helper/fast
 
+#=============================================================================
+# Target rules for targets named gain-vst-tests
+
+# Build rule for target.
+gain-vst-tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gain-vst-tests
+.PHONY : gain-vst-tests
+
+# fast build rule for target.
+gain-vst-tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/build
+.PHONY : gain-vst-tests/fast
+
+#=============================================================================
+# Target rules for targets named Catch2
+
+# Build rule for target.
+Catch2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Catch2
+.PHONY : Catch2
+
+# fast build rule for target.
+Catch2/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/catch2-build/src/CMakeFiles/Catch2.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2.dir/build
+.PHONY : Catch2/fast
+
+#=============================================================================
+# Target rules for targets named Catch2WithMain
+
+# Build rule for target.
+Catch2WithMain: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Catch2WithMain
+.PHONY : Catch2WithMain
+
+# fast build rule for target.
+Catch2WithMain/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build
+.PHONY : Catch2WithMain/fast
+
 JUCE/modules/juce_audio_basics/juce_audio_basics.o: JUCE/modules/juce_audio_basics/juce_audio_basics.mm.o
 .PHONY : JUCE/modules/juce_audio_basics/juce_audio_basics.o
 
 # target to build an object file
 JUCE/modules/juce_audio_basics/juce_audio_basics.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.o
 .PHONY : JUCE/modules/juce_audio_basics/juce_audio_basics.mm.o
 
 JUCE/modules/juce_audio_basics/juce_audio_basics.i: JUCE/modules/juce_audio_basics/juce_audio_basics.mm.i
@@ -241,6 +291,7 @@ JUCE/modules/juce_audio_basics/juce_audio_basics.i: JUCE/modules/juce_audio_basi
 # target to preprocess a source file
 JUCE/modules/juce_audio_basics/juce_audio_basics.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.i
 .PHONY : JUCE/modules/juce_audio_basics/juce_audio_basics.mm.i
 
 JUCE/modules/juce_audio_basics/juce_audio_basics.s: JUCE/modules/juce_audio_basics/juce_audio_basics.mm.s
@@ -249,6 +300,7 @@ JUCE/modules/juce_audio_basics/juce_audio_basics.s: JUCE/modules/juce_audio_basi
 # target to generate assembly for a file
 JUCE/modules/juce_audio_basics/juce_audio_basics.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.s
 .PHONY : JUCE/modules/juce_audio_basics/juce_audio_basics.mm.s
 
 JUCE/modules/juce_audio_devices/juce_audio_devices.o: JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o
@@ -257,6 +309,7 @@ JUCE/modules/juce_audio_devices/juce_audio_devices.o: JUCE/modules/juce_audio_de
 # target to build an object file
 JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o
 .PHONY : JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o
 
 JUCE/modules/juce_audio_devices/juce_audio_devices.i: JUCE/modules/juce_audio_devices/juce_audio_devices.mm.i
@@ -265,6 +318,7 @@ JUCE/modules/juce_audio_devices/juce_audio_devices.i: JUCE/modules/juce_audio_de
 # target to preprocess a source file
 JUCE/modules/juce_audio_devices/juce_audio_devices.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.i
 .PHONY : JUCE/modules/juce_audio_devices/juce_audio_devices.mm.i
 
 JUCE/modules/juce_audio_devices/juce_audio_devices.s: JUCE/modules/juce_audio_devices/juce_audio_devices.mm.s
@@ -273,6 +327,7 @@ JUCE/modules/juce_audio_devices/juce_audio_devices.s: JUCE/modules/juce_audio_de
 # target to generate assembly for a file
 JUCE/modules/juce_audio_devices/juce_audio_devices.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.s
 .PHONY : JUCE/modules/juce_audio_devices/juce_audio_devices.mm.s
 
 JUCE/modules/juce_audio_formats/juce_audio_formats.o: JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o
@@ -281,6 +336,7 @@ JUCE/modules/juce_audio_formats/juce_audio_formats.o: JUCE/modules/juce_audio_fo
 # target to build an object file
 JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o
 .PHONY : JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o
 
 JUCE/modules/juce_audio_formats/juce_audio_formats.i: JUCE/modules/juce_audio_formats/juce_audio_formats.mm.i
@@ -289,6 +345,7 @@ JUCE/modules/juce_audio_formats/juce_audio_formats.i: JUCE/modules/juce_audio_fo
 # target to preprocess a source file
 JUCE/modules/juce_audio_formats/juce_audio_formats.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.i
 .PHONY : JUCE/modules/juce_audio_formats/juce_audio_formats.mm.i
 
 JUCE/modules/juce_audio_formats/juce_audio_formats.s: JUCE/modules/juce_audio_formats/juce_audio_formats.mm.s
@@ -297,6 +354,7 @@ JUCE/modules/juce_audio_formats/juce_audio_formats.s: JUCE/modules/juce_audio_fo
 # target to generate assembly for a file
 JUCE/modules/juce_audio_formats/juce_audio_formats.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.s
 .PHONY : JUCE/modules/juce_audio_formats/juce_audio_formats.mm.s
 
 JUCE/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.o: JUCE/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.mm.o
@@ -626,6 +684,7 @@ JUCE/modules/juce_audio_processors/juce_audio_processors.o: JUCE/modules/juce_au
 # target to build an object file
 JUCE/modules/juce_audio_processors/juce_audio_processors.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.o
 .PHONY : JUCE/modules/juce_audio_processors/juce_audio_processors.mm.o
 
 JUCE/modules/juce_audio_processors/juce_audio_processors.i: JUCE/modules/juce_audio_processors/juce_audio_processors.mm.i
@@ -634,6 +693,7 @@ JUCE/modules/juce_audio_processors/juce_audio_processors.i: JUCE/modules/juce_au
 # target to preprocess a source file
 JUCE/modules/juce_audio_processors/juce_audio_processors.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.i
 .PHONY : JUCE/modules/juce_audio_processors/juce_audio_processors.mm.i
 
 JUCE/modules/juce_audio_processors/juce_audio_processors.s: JUCE/modules/juce_audio_processors/juce_audio_processors.mm.s
@@ -642,6 +702,7 @@ JUCE/modules/juce_audio_processors/juce_audio_processors.s: JUCE/modules/juce_au
 # target to generate assembly for a file
 JUCE/modules/juce_audio_processors/juce_audio_processors.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.s
 .PHONY : JUCE/modules/juce_audio_processors/juce_audio_processors.mm.s
 
 JUCE/modules/juce_audio_processors/juce_audio_processors_ara.o: JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o
@@ -650,6 +711,7 @@ JUCE/modules/juce_audio_processors/juce_audio_processors_ara.o: JUCE/modules/juc
 # target to build an object file
 JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o
 .PHONY : JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o
 
 JUCE/modules/juce_audio_processors/juce_audio_processors_ara.i: JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.i
@@ -658,6 +720,7 @@ JUCE/modules/juce_audio_processors/juce_audio_processors_ara.i: JUCE/modules/juc
 # target to preprocess a source file
 JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.i
 .PHONY : JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.i
 
 JUCE/modules/juce_audio_processors/juce_audio_processors_ara.s: JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.s
@@ -666,6 +729,7 @@ JUCE/modules/juce_audio_processors/juce_audio_processors_ara.s: JUCE/modules/juc
 # target to generate assembly for a file
 JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.s
 .PHONY : JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.s
 
 JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.o: JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o
@@ -674,6 +738,7 @@ JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.o: JUCE/module
 # target to build an object file
 JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o
 .PHONY : JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o
 
 JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.i: JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.i
@@ -682,6 +747,7 @@ JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.i: JUCE/module
 # target to preprocess a source file
 JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.i
 .PHONY : JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.i
 
 JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.s: JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.s
@@ -690,6 +756,7 @@ JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.s: JUCE/module
 # target to generate assembly for a file
 JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.s
 .PHONY : JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.s
 
 JUCE/modules/juce_audio_utils/juce_audio_utils.o: JUCE/modules/juce_audio_utils/juce_audio_utils.mm.o
@@ -698,6 +765,7 @@ JUCE/modules/juce_audio_utils/juce_audio_utils.o: JUCE/modules/juce_audio_utils/
 # target to build an object file
 JUCE/modules/juce_audio_utils/juce_audio_utils.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.o
 .PHONY : JUCE/modules/juce_audio_utils/juce_audio_utils.mm.o
 
 JUCE/modules/juce_audio_utils/juce_audio_utils.i: JUCE/modules/juce_audio_utils/juce_audio_utils.mm.i
@@ -706,6 +774,7 @@ JUCE/modules/juce_audio_utils/juce_audio_utils.i: JUCE/modules/juce_audio_utils/
 # target to preprocess a source file
 JUCE/modules/juce_audio_utils/juce_audio_utils.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.i
 .PHONY : JUCE/modules/juce_audio_utils/juce_audio_utils.mm.i
 
 JUCE/modules/juce_audio_utils/juce_audio_utils.s: JUCE/modules/juce_audio_utils/juce_audio_utils.mm.s
@@ -714,6 +783,7 @@ JUCE/modules/juce_audio_utils/juce_audio_utils.s: JUCE/modules/juce_audio_utils/
 # target to generate assembly for a file
 JUCE/modules/juce_audio_utils/juce_audio_utils.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.s
 .PHONY : JUCE/modules/juce_audio_utils/juce_audio_utils.mm.s
 
 JUCE/modules/juce_core/juce_core.o: JUCE/modules/juce_core/juce_core.mm.o
@@ -722,6 +792,7 @@ JUCE/modules/juce_core/juce_core.o: JUCE/modules/juce_core/juce_core.mm.o
 # target to build an object file
 JUCE/modules/juce_core/juce_core.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_core/juce_core.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_core/juce_core.mm.o
 .PHONY : JUCE/modules/juce_core/juce_core.mm.o
 
 JUCE/modules/juce_core/juce_core.i: JUCE/modules/juce_core/juce_core.mm.i
@@ -730,6 +801,7 @@ JUCE/modules/juce_core/juce_core.i: JUCE/modules/juce_core/juce_core.mm.i
 # target to preprocess a source file
 JUCE/modules/juce_core/juce_core.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_core/juce_core.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_core/juce_core.mm.i
 .PHONY : JUCE/modules/juce_core/juce_core.mm.i
 
 JUCE/modules/juce_core/juce_core.s: JUCE/modules/juce_core/juce_core.mm.s
@@ -738,6 +810,7 @@ JUCE/modules/juce_core/juce_core.s: JUCE/modules/juce_core/juce_core.mm.s
 # target to generate assembly for a file
 JUCE/modules/juce_core/juce_core.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_core/juce_core.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_core/juce_core.mm.s
 .PHONY : JUCE/modules/juce_core/juce_core.mm.s
 
 JUCE/modules/juce_core/juce_core_CompilationTime.o: JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o
@@ -746,6 +819,7 @@ JUCE/modules/juce_core/juce_core_CompilationTime.o: JUCE/modules/juce_core/juce_
 # target to build an object file
 JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o
 .PHONY : JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o
 
 JUCE/modules/juce_core/juce_core_CompilationTime.i: JUCE/modules/juce_core/juce_core_CompilationTime.cpp.i
@@ -754,6 +828,7 @@ JUCE/modules/juce_core/juce_core_CompilationTime.i: JUCE/modules/juce_core/juce_
 # target to preprocess a source file
 JUCE/modules/juce_core/juce_core_CompilationTime.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.i
 .PHONY : JUCE/modules/juce_core/juce_core_CompilationTime.cpp.i
 
 JUCE/modules/juce_core/juce_core_CompilationTime.s: JUCE/modules/juce_core/juce_core_CompilationTime.cpp.s
@@ -762,6 +837,7 @@ JUCE/modules/juce_core/juce_core_CompilationTime.s: JUCE/modules/juce_core/juce_
 # target to generate assembly for a file
 JUCE/modules/juce_core/juce_core_CompilationTime.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.s
 .PHONY : JUCE/modules/juce_core/juce_core_CompilationTime.cpp.s
 
 JUCE/modules/juce_data_structures/juce_data_structures.o: JUCE/modules/juce_data_structures/juce_data_structures.mm.o
@@ -770,6 +846,7 @@ JUCE/modules/juce_data_structures/juce_data_structures.o: JUCE/modules/juce_data
 # target to build an object file
 JUCE/modules/juce_data_structures/juce_data_structures.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_data_structures/juce_data_structures.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_data_structures/juce_data_structures.mm.o
 .PHONY : JUCE/modules/juce_data_structures/juce_data_structures.mm.o
 
 JUCE/modules/juce_data_structures/juce_data_structures.i: JUCE/modules/juce_data_structures/juce_data_structures.mm.i
@@ -778,6 +855,7 @@ JUCE/modules/juce_data_structures/juce_data_structures.i: JUCE/modules/juce_data
 # target to preprocess a source file
 JUCE/modules/juce_data_structures/juce_data_structures.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_data_structures/juce_data_structures.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_data_structures/juce_data_structures.mm.i
 .PHONY : JUCE/modules/juce_data_structures/juce_data_structures.mm.i
 
 JUCE/modules/juce_data_structures/juce_data_structures.s: JUCE/modules/juce_data_structures/juce_data_structures.mm.s
@@ -786,6 +864,7 @@ JUCE/modules/juce_data_structures/juce_data_structures.s: JUCE/modules/juce_data
 # target to generate assembly for a file
 JUCE/modules/juce_data_structures/juce_data_structures.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_data_structures/juce_data_structures.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_data_structures/juce_data_structures.mm.s
 .PHONY : JUCE/modules/juce_data_structures/juce_data_structures.mm.s
 
 JUCE/modules/juce_events/juce_events.o: JUCE/modules/juce_events/juce_events.mm.o
@@ -794,6 +873,7 @@ JUCE/modules/juce_events/juce_events.o: JUCE/modules/juce_events/juce_events.mm.
 # target to build an object file
 JUCE/modules/juce_events/juce_events.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_events/juce_events.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_events/juce_events.mm.o
 .PHONY : JUCE/modules/juce_events/juce_events.mm.o
 
 JUCE/modules/juce_events/juce_events.i: JUCE/modules/juce_events/juce_events.mm.i
@@ -802,6 +882,7 @@ JUCE/modules/juce_events/juce_events.i: JUCE/modules/juce_events/juce_events.mm.
 # target to preprocess a source file
 JUCE/modules/juce_events/juce_events.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_events/juce_events.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_events/juce_events.mm.i
 .PHONY : JUCE/modules/juce_events/juce_events.mm.i
 
 JUCE/modules/juce_events/juce_events.s: JUCE/modules/juce_events/juce_events.mm.s
@@ -810,6 +891,7 @@ JUCE/modules/juce_events/juce_events.s: JUCE/modules/juce_events/juce_events.mm.
 # target to generate assembly for a file
 JUCE/modules/juce_events/juce_events.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_events/juce_events.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_events/juce_events.mm.s
 .PHONY : JUCE/modules/juce_events/juce_events.mm.s
 
 JUCE/modules/juce_graphics/juce_graphics.o: JUCE/modules/juce_graphics/juce_graphics.mm.o
@@ -818,6 +900,7 @@ JUCE/modules/juce_graphics/juce_graphics.o: JUCE/modules/juce_graphics/juce_grap
 # target to build an object file
 JUCE/modules/juce_graphics/juce_graphics.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_graphics/juce_graphics.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_graphics/juce_graphics.mm.o
 .PHONY : JUCE/modules/juce_graphics/juce_graphics.mm.o
 
 JUCE/modules/juce_graphics/juce_graphics.i: JUCE/modules/juce_graphics/juce_graphics.mm.i
@@ -826,6 +909,7 @@ JUCE/modules/juce_graphics/juce_graphics.i: JUCE/modules/juce_graphics/juce_grap
 # target to preprocess a source file
 JUCE/modules/juce_graphics/juce_graphics.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_graphics/juce_graphics.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_graphics/juce_graphics.mm.i
 .PHONY : JUCE/modules/juce_graphics/juce_graphics.mm.i
 
 JUCE/modules/juce_graphics/juce_graphics.s: JUCE/modules/juce_graphics/juce_graphics.mm.s
@@ -834,6 +918,7 @@ JUCE/modules/juce_graphics/juce_graphics.s: JUCE/modules/juce_graphics/juce_grap
 # target to generate assembly for a file
 JUCE/modules/juce_graphics/juce_graphics.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_graphics/juce_graphics.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_graphics/juce_graphics.mm.s
 .PHONY : JUCE/modules/juce_graphics/juce_graphics.mm.s
 
 JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.o: JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
@@ -842,6 +927,7 @@ JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.o: JUCE/modules/juce_graphics/
 # target to build an object file
 JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
 .PHONY : JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
 
 JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.i: JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.i
@@ -850,6 +936,7 @@ JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.i: JUCE/modules/juce_graphics/
 # target to preprocess a source file
 JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.i
 .PHONY : JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.i
 
 JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.s: JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.s
@@ -858,6 +945,7 @@ JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.s: JUCE/modules/juce_graphics/
 # target to generate assembly for a file
 JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.s
 .PHONY : JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.s
 
 JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.o: JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
@@ -866,6 +954,7 @@ JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.o: JUCE/modules/juce_graphics
 # target to build an object file
 JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
 .PHONY : JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
 
 JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.i: JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.i
@@ -874,6 +963,7 @@ JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.i: JUCE/modules/juce_graphics
 # target to preprocess a source file
 JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.i
 .PHONY : JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.i
 
 JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.s: JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.s
@@ -882,6 +972,7 @@ JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.s: JUCE/modules/juce_graphics
 # target to generate assembly for a file
 JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.s
 .PHONY : JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.s
 
 JUCE/modules/juce_gui_basics/juce_gui_basics.o: JUCE/modules/juce_gui_basics/juce_gui_basics.mm.o
@@ -890,6 +981,7 @@ JUCE/modules/juce_gui_basics/juce_gui_basics.o: JUCE/modules/juce_gui_basics/juc
 # target to build an object file
 JUCE/modules/juce_gui_basics/juce_gui_basics.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.o
 .PHONY : JUCE/modules/juce_gui_basics/juce_gui_basics.mm.o
 
 JUCE/modules/juce_gui_basics/juce_gui_basics.i: JUCE/modules/juce_gui_basics/juce_gui_basics.mm.i
@@ -898,6 +990,7 @@ JUCE/modules/juce_gui_basics/juce_gui_basics.i: JUCE/modules/juce_gui_basics/juc
 # target to preprocess a source file
 JUCE/modules/juce_gui_basics/juce_gui_basics.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.i
 .PHONY : JUCE/modules/juce_gui_basics/juce_gui_basics.mm.i
 
 JUCE/modules/juce_gui_basics/juce_gui_basics.s: JUCE/modules/juce_gui_basics/juce_gui_basics.mm.s
@@ -906,6 +999,7 @@ JUCE/modules/juce_gui_basics/juce_gui_basics.s: JUCE/modules/juce_gui_basics/juc
 # target to generate assembly for a file
 JUCE/modules/juce_gui_basics/juce_gui_basics.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.s
 .PHONY : JUCE/modules/juce_gui_basics/juce_gui_basics.mm.s
 
 JUCE/modules/juce_gui_extra/juce_gui_extra.o: JUCE/modules/juce_gui_extra/juce_gui_extra.mm.o
@@ -914,6 +1008,7 @@ JUCE/modules/juce_gui_extra/juce_gui_extra.o: JUCE/modules/juce_gui_extra/juce_g
 # target to build an object file
 JUCE/modules/juce_gui_extra/juce_gui_extra.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.o
 .PHONY : JUCE/modules/juce_gui_extra/juce_gui_extra.mm.o
 
 JUCE/modules/juce_gui_extra/juce_gui_extra.i: JUCE/modules/juce_gui_extra/juce_gui_extra.mm.i
@@ -922,6 +1017,7 @@ JUCE/modules/juce_gui_extra/juce_gui_extra.i: JUCE/modules/juce_gui_extra/juce_g
 # target to preprocess a source file
 JUCE/modules/juce_gui_extra/juce_gui_extra.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.i
 .PHONY : JUCE/modules/juce_gui_extra/juce_gui_extra.mm.i
 
 JUCE/modules/juce_gui_extra/juce_gui_extra.s: JUCE/modules/juce_gui_extra/juce_gui_extra.mm.s
@@ -930,6 +1026,7 @@ JUCE/modules/juce_gui_extra/juce_gui_extra.s: JUCE/modules/juce_gui_extra/juce_g
 # target to generate assembly for a file
 JUCE/modules/juce_gui_extra/juce_gui_extra.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.s
 .PHONY : JUCE/modules/juce_gui_extra/juce_gui_extra.mm.s
 
 Source/PluginEditor.o: Source/PluginEditor.cpp.o
@@ -980,6 +1077,30 @@ Source/PluginProcessor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst.dir/build.make CMakeFiles/gain-vst.dir/Source/PluginProcessor.cpp.s
 .PHONY : Source/PluginProcessor.cpp.s
 
+Source/PluginTests.o: Source/PluginTests.cpp.o
+.PHONY : Source/PluginTests.o
+
+# target to build an object file
+Source/PluginTests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/Source/PluginTests.cpp.o
+.PHONY : Source/PluginTests.cpp.o
+
+Source/PluginTests.i: Source/PluginTests.cpp.i
+.PHONY : Source/PluginTests.i
+
+# target to preprocess a source file
+Source/PluginTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/Source/PluginTests.cpp.i
+.PHONY : Source/PluginTests.cpp.i
+
+Source/PluginTests.s: Source/PluginTests.cpp.s
+.PHONY : Source/PluginTests.s
+
+# target to generate assembly for a file
+Source/PluginTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gain-vst-tests.dir/build.make CMakeFiles/gain-vst-tests.dir/Source/PluginTests.cpp.s
+.PHONY : Source/PluginTests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -992,8 +1113,12 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... gain-vst_All"
+	@echo "... Catch2"
+	@echo "... Catch2WithMain"
 	@echo "... gain-vst"
+	@echo "... gain-vst-tests"
 	@echo "... gain-vst_Standalone"
 	@echo "... gain-vst_VST3"
 	@echo "... juce_vst3_helper"
@@ -1087,6 +1212,9 @@ help:
 	@echo "... Source/PluginProcessor.o"
 	@echo "... Source/PluginProcessor.i"
 	@echo "... Source/PluginProcessor.s"
+	@echo "... Source/PluginTests.o"
+	@echo "... Source/PluginTests.i"
+	@echo "... Source/PluginTests.s"
 .PHONY : help
 
 

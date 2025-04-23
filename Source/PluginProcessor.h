@@ -56,6 +56,13 @@ public:
     // Gain parameter getter
     juce::AudioParameterFloat* getGainParameter() { return gainParameter; }
 
+    // Parameter setter for testing
+    void setParameter(int parameterIndex, float newValue) {
+        if (parameterIndex == 0 && gainParameter != nullptr) {
+            gainParameter->setValueNotifyingHost(newValue);
+        }
+    }
+
 private:
     //==============================================================================
     juce::AudioParameterFloat* gainParameter;

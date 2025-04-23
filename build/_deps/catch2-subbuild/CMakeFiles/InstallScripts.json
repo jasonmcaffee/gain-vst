@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/jason/Documents/dev/gain-vst/build/_deps/catch2-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

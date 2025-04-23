@@ -1,6 +1,17 @@
 cmake_minimum_required(VERSION 3.15)
 project(gain-vst VERSION 1.0.0)
 
+# Include FetchContent for downloading Catch2
+include(FetchContent)
+
+# Fetch Catch2
+FetchContent_Declare(
+    Catch2
+    GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+    GIT_TAG v3.4.0
+)
+FetchContent_MakeAvailable(Catch2)
+
 # Add JUCE as a subdirectory
 add_subdirectory(JUCE)
 
@@ -51,4 +62,45 @@ target_include_directories(gain-vst PRIVATE
 )
 
 # Enable JUCE modules
-juce_generate_juce_header(gain-vst) 
+juce_generate_juce_header(gain-vst)
+
+# Add test target
+juce_add_console_app(gain-vst-tests
+    PRODUCT_NAME "Gain VST Tests")
+
+# Add test source files
+target_sources(gain-vst-tests
+    PRIVATE
+        Source/PluginTests.cpp)
+
+# Set C++ standard for tests
+target_compile_features(gain-vst-tests PRIVATE cxx_std_17)
+
+# Link test dependencies
+target_link_libraries(gain-vst-tests
+    PRIVATE
+        gain-vst
+        Catch2::Catch2WithMain
+        juce::juce_audio_utils
+        juce::juce_audio_processors
+        juce::juce_core
+        juce::juce_data_structures
+        juce::juce_events
+        juce::juce_graphics
+        juce::juce_gui_basics
+        juce::juce_gui_extra)
+
+# Set include directories for tests
+target_include_directories(gain-vst-tests PRIVATE 
+    ${CMAKE_SOURCE_DIR}/Source
+    ${CMAKE_SOURCE_DIR}/JuceLibraryCode
+    ${CMAKE_SOURCE_DIR}/JUCE/modules
+    ${Catch2_SOURCE_DIR}/include
+)
+
+# Generate JUCE header for tests
+juce_generate_juce_header(gain-vst-tests)
+
+# Enable testing
+enable_testing()
+add_test(NAME gain-vst-tests COMMAND gain-vst-tests) 

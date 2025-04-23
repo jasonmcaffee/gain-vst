@@ -32,6 +32,7 @@ private:
     GainvstAudioProcessor& audioProcessor;
     juce::Slider gainSlider;
     juce::Label gainLabel;
+    juce::Label versionLabel;  // Label to display build version
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (GainvstAudioProcessorEditor)
 };

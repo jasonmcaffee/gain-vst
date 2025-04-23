@@ -2,6 +2,8 @@
 	"InstallScripts" : 
 	[
 		"/Users/jason/Documents/dev/gain-vst/build/cmake_install.cmake",
+		"/Users/jason/Documents/dev/gain-vst/build/_deps/catch2-build/cmake_install.cmake",
+		"/Users/jason/Documents/dev/gain-vst/build/_deps/catch2-build/src/cmake_install.cmake",
 		"/Users/jason/Documents/dev/gain-vst/build/JUCE/cmake_install.cmake",
 		"/Users/jason/Documents/dev/gain-vst/build/JUCE/modules/cmake_install.cmake",
 		"/Users/jason/Documents/dev/gain-vst/build/JUCE/extras/Build/cmake_install.cmake",

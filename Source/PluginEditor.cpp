@@ -27,6 +27,12 @@ GainvstAudioProcessorEditor::GainvstAudioProcessorEditor (GainvstAudioProcessor&
     gainLabel.setText("Gain", juce::dontSendNotification);
     gainLabel.setJustificationType(juce::Justification::centred);
     addAndMakeVisible(gainLabel);
+
+    // Initialize version label with build date and time
+    versionLabel.setText("Build: " + juce::String(__DATE__) + " " + juce::String(__TIME__), juce::dontSendNotification);
+    versionLabel.setJustificationType(juce::Justification::centredRight);
+    versionLabel.setFont(juce::Font(12.0f));
+    addAndMakeVisible(versionLabel);
 }
 
 GainvstAudioProcessorEditor::~GainvstAudioProcessorEditor()
@@ -43,6 +49,11 @@ void GainvstAudioProcessorEditor::paint (juce::Graphics& g)
 void GainvstAudioProcessorEditor::resized()
 {
     auto area = getLocalBounds();
+    
+    // Position version label at bottom right
+    versionLabel.setBounds(area.removeFromBottom(20).reduced(5));
+    
+    // Layout other components
     gainLabel.setBounds(area.removeFromTop(20));
     gainSlider.setBounds(area.reduced(50));
 }

@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio Version 17
+
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gain-vst - Standalone Plugin", "gain-vst_StandalonePlugin.vcxproj", "{78A47359-C0C7-C6F4-E866-EDD2839CEAB1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{62D818B2-D343-DF7D-66FC-98A667C5D457} = {62D818B2-D343-DF7D-66FC-98A667C5D457}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gain-vst - VST3", "gain-vst_VST3.vcxproj", "{B0EA8635-630E-59E5-5701-77A5956028C7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{62D818B2-D343-DF7D-66FC-98A667C5D457} = {62D818B2-D343-DF7D-66FC-98A667C5D457}
+		{8DA8E8F5-72A6-4173-6C86-F3487BB980B5} = {8DA8E8F5-72A6-4173-6C86-F3487BB980B5}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gain-vst - Shared Code", "gain-vst_SharedCode.vcxproj", "{62D818B2-D343-DF7D-66FC-98A667C5D457}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gain-vst - VST3 Manifest Helper", "gain-vst_VST3ManifestHelper.vcxproj", "{8DA8E8F5-72A6-4173-6C86-F3487BB980B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0EA8635-630E-59E5-5701-77A5956028C7}.Debug|x64.ActiveCfg = Debug|x64
+		{B0EA8635-630E-59E5-5701-77A5956028C7}.Debug|x64.Build.0 = Debug|x64
+		{B0EA8635-630E-59E5-5701-77A5956028C7}.Release|x64.ActiveCfg = Release|x64
+		{B0EA8635-630E-59E5-5701-77A5956028C7}.Release|x64.Build.0 = Release|x64
+		{78A47359-C0C7-C6F4-E866-EDD2839CEAB1}.Debug|x64.ActiveCfg = Debug|x64
+		{78A47359-C0C7-C6F4-E866-EDD2839CEAB1}.Debug|x64.Build.0 = Debug|x64
+		{78A47359-C0C7-C6F4-E866-EDD2839CEAB1}.Release|x64.ActiveCfg = Release|x64
+		{78A47359-C0C7-C6F4-E866-EDD2839CEAB1}.Release|x64.Build.0 = Release|x64
+		{62D818B2-D343-DF7D-66FC-98A667C5D457}.Debug|x64.ActiveCfg = Debug|x64
+		{62D818B2-D343-DF7D-66FC-98A667C5D457}.Debug|x64.Build.0 = Debug|x64
+		{62D818B2-D343-DF7D-66FC-98A667C5D457}.Release|x64.ActiveCfg = Release|x64
+		{62D818B2-D343-DF7D-66FC-98A667C5D457}.Release|x64.Build.0 = Release|x64
+		{8DA8E8F5-72A6-4173-6C86-F3487BB980B5}.Debug|x64.ActiveCfg = Debug|x64
+		{8DA8E8F5-72A6-4173-6C86-F3487BB980B5}.Debug|x64.Build.0 = Debug|x64
+		{8DA8E8F5-72A6-4173-6C86-F3487BB980B5}.Release|x64.ActiveCfg = Release|x64
+		{8DA8E8F5-72A6-4173-6C86-F3487BB980B5}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

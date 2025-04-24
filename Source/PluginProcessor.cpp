@@ -13,15 +13,19 @@
 GainvstAudioProcessor::GainvstAudioProcessor()
 #ifndef JucePlugin_PreferredChannelConfigurations
      : AudioProcessor (BusesProperties()
-                     #if ! JucePlugin_IsMidiEffect
-                      #if ! JucePlugin_IsSynth
                        .withInput  ("Input",  juce::AudioChannelSet::stereo(), true)
-                      #endif
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
-                     #endif
                        )
 #endif
 {
+    // Request microphone permissions if needed
+    if (juce::RuntimePermissions::isRequired (juce::RuntimePermissions::recordAudio)
+        && ! juce::RuntimePermissions::isGranted (juce::RuntimePermissions::recordAudio))
+    {
+        juce::RuntimePermissions::request (juce::RuntimePermissions::recordAudio,
+                                           [this] (bool granted) { });
+    }
+
     // Add gain parameter with linear range (0.0 = silence, 0.5 = half volume, 1.0 = normal volume, 2.0 = double volume)
     addParameter(gainParameter = new juce::AudioParameterFloat("gain", "Gain", 
         0.0f, 2.0f, 1.0f));

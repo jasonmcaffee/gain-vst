@@ -1,0 +1,3 @@
+/Users/jason/Documents/dev/gain-vst/cmake-build-debug/_deps/catch2-subbuild/CMakeFiles/catch2-populate.dir
+/Users/jason/Documents/dev/gain-vst/cmake-build-debug/_deps/catch2-subbuild/CMakeFiles/edit_cache.dir
+/Users/jason/Documents/dev/gain-vst/cmake-build-debug/_deps/catch2-subbuild/CMakeFiles/rebuild_cache.dir

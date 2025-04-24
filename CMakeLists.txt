@@ -44,6 +44,7 @@ target_link_libraries(gain-vst
     PRIVATE
         juce::juce_audio_utils
         juce::juce_audio_processors
+        juce::juce_audio_devices
         juce::juce_core
         juce::juce_data_structures
         juce::juce_events

@@ -1,0 +1,9 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/jason/Documents/dev/gain-vst -B /Users/jason/Documents/dev/gain-vst/cmake-build-debug
+-- Configuring juceaide
+-- Building juceaide
+-- Exporting juceaide
+-- Testing juceaide
+-- Finished setting up juceaide
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/jason/Documents/dev/gain-vst/cmake-build-debug

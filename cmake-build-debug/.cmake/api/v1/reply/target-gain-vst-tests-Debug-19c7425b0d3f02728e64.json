@@ -1,0 +1,1315 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "gain-vst-tests_artefacts/Debug/gain-vst-tests"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"juce_add_console_app",
+			"target_link_libraries",
+			"_juce_link_frameworks",
+			"juce_add_module",
+			"juce_add_modules",
+			"target_compile_definitions",
+			"target_include_directories",
+			"_juce_initialise_target",
+			"target_compile_features",
+			"target_sources",
+			"juce_generate_juce_header"
+		],
+		"files" : 
+		[
+			"JUCE/extras/Build/CMake/JUCEUtils.cmake",
+			"CMakeLists.txt",
+			"JUCE/extras/Build/CMake/JUCEModuleSupport.cmake",
+			"JUCE/modules/CMakeLists.txt",
+			"cmake-build-debug/_deps/catch2-src/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 69,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2130,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 81,
+				"parent" : 0
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 33,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 686,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 619,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 341,
+				"parent" : 7
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 619,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 341,
+				"parent" : 9
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 397,
+				"parent" : 11
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 2131,
+				"parent" : 1
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 2152,
+				"parent" : 1
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 2100,
+				"parent" : 14
+			},
+			{
+				"command" : 7,
+				"file" : 1,
+				"line" : 95,
+				"parent" : 0
+			},
+			{
+				"command" : 9,
+				"file" : 1,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 10,
+				"file" : 1,
+				"line" : 73,
+				"parent" : 0
+			},
+			{
+				"command" : 11,
+				"file" : 1,
+				"line" : 103,
+				"parent" : 0
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 559,
+				"parent" : 19
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fPIE -fcolor-diagnostics"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-O0"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wshadow-all"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wshorten-64-to-32"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wstrict-aliasing"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wuninitialized"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wunused-parameter"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wconversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wsign-compare"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wint-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wconditional-uninitialized"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wconstant-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wsign-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wbool-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wextra-semi"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wunreachable-code"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wcast-align"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wshift-sign-overflow"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wmissing-prototypes"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wnullable-to-nonnull-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-ignored-qualifiers"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wswitch-enum"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wpedantic"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wdeprecated"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wfloat-equal"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wmissing-field-initializers"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wzero-as-null-pointer-constant"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wunused-private-field"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Woverloaded-virtual"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wreorder"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Winconsistent-missing-destructor-override"
+				},
+				{
+					"fragment" : "-std=gnu++17"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "DEBUG=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_basics=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_devices=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_formats=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_processors=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_utils=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_core=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_data_structures=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_events=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_graphics=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_gui_basics=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_gui_extra=1"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "JUCE_STANDALONE_APPLICATION=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AAXCategory=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AAXDisableBypass=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AAXDisableMultiMono=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AAXIdentifier=com.YourCompany.gain-vst"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AAXProductId=JucePlugin_PluginCode"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ARACompatibleArchiveIDs=\"\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ARAContentTypes=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ARADocumentArchiveID=\"com.YourCompany.gain-vst.aradocumentarchive.1\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ARAFactoryID=\"com.YourCompany.gain-vst.arafactory.1.0.0\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ARATransformationFlags=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AUExportPrefix=Gain_VSTAU"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AUExportPrefixQuoted=\"Gain_VSTAU\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AUMainType='aufx'"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AUSubType=JucePlugin_PluginCode"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_CFBundleIdentifier=com.YourCompany.gain-vst"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_Desc=\"Gain VST\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_EditorRequiresKeyboardFocus=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_Enable_ARA=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_IsMidiEffect=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_IsSynth=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_Manufacturer=\"YourCompany\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ManufacturerCode=0x59634370"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ManufacturerEmail=\"\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ManufacturerWebsite=\"\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_Name=\"Gain VST\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_PluginCode=0x47767374"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ProducesMidiOutput=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_VSTCategory=kPlugCategEffect"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_VSTNumMidiInputs=16"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_VSTNumMidiOutputs=16"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_VSTUniqueID=JucePlugin_PluginCode"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_Version=1.0.0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_VersionCode=0x10000"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_VersionString=\"1.0.0\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_Vst3Category=\"Fx\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_WantsMidiInput=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "_DEBUG=1"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 15,
+					"path" : "/Users/jason/Documents/dev/gain-vst/cmake-build-debug/gain-vst-tests_artefacts/JuceLibraryCode"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/Users/jason/Documents/dev/gain-vst/Source"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JuceLibraryCode"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/Users/jason/Documents/dev/gain-vst/cmake-build-debug/_deps/catch2-src/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/cmake-build-debug/_deps/catch2-src/src/catch2/.."
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/cmake-build-debug/_deps/catch2-build/generated-includes"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/VST3_SDK"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/LV2_SDK"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lv2"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/serd"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sord"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sord/src"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sratom"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lilv"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					17,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3,
+					3
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fPIE -fcolor-diagnostics"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-O0"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wshadow-all"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wshorten-64-to-32"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wstrict-aliasing"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wuninitialized"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wunused-parameter"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wconversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wsign-compare"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wint-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wconditional-uninitialized"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wconstant-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wsign-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wbool-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wextra-semi"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wunreachable-code"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wcast-align"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wshift-sign-overflow"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wmissing-prototypes"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wnullable-to-nonnull-conversion"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-ignored-qualifiers"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wswitch-enum"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wpedantic"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wdeprecated"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wfloat-equal"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wmissing-field-initializers"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "DEBUG=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_basics=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_devices=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_formats=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_processors=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_audio_utils=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_core=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_data_structures=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_events=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_graphics=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_gui_basics=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_MODULE_AVAILABLE_juce_gui_extra=1"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "JUCE_STANDALONE_APPLICATION=1"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AAXCategory=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AAXDisableBypass=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AAXDisableMultiMono=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AAXIdentifier=com.YourCompany.gain-vst"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AAXProductId=JucePlugin_PluginCode"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ARACompatibleArchiveIDs=\"\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ARAContentTypes=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ARADocumentArchiveID=\"com.YourCompany.gain-vst.aradocumentarchive.1\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ARAFactoryID=\"com.YourCompany.gain-vst.arafactory.1.0.0\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ARATransformationFlags=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AUExportPrefix=Gain_VSTAU"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AUExportPrefixQuoted=\"Gain_VSTAU\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AUMainType='aufx'"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_AUSubType=JucePlugin_PluginCode"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_CFBundleIdentifier=com.YourCompany.gain-vst"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_Desc=\"Gain VST\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_EditorRequiresKeyboardFocus=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_Enable_ARA=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_IsMidiEffect=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_IsSynth=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_Manufacturer=\"YourCompany\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ManufacturerCode=0x59634370"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ManufacturerEmail=\"\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ManufacturerWebsite=\"\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_Name=\"Gain VST\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_PluginCode=0x47767374"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_ProducesMidiOutput=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_VSTCategory=kPlugCategEffect"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_VSTNumMidiInputs=16"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_VSTNumMidiOutputs=16"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_VSTUniqueID=JucePlugin_PluginCode"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_Version=1.0.0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_VersionCode=0x10000"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_VersionString=\"1.0.0\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_Vst3Category=\"Fx\""
+				},
+				{
+					"backtrace" : 3,
+					"define" : "JucePlugin_WantsMidiInput=0"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "_DEBUG=1"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 15,
+					"path" : "/Users/jason/Documents/dev/gain-vst/cmake-build-debug/gain-vst-tests_artefacts/JuceLibraryCode"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/Users/jason/Documents/dev/gain-vst/Source"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JuceLibraryCode"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/Users/jason/Documents/dev/gain-vst/cmake-build-debug/_deps/catch2-src/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/cmake-build-debug/_deps/catch2-src/src/catch2/.."
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/cmake-build-debug/_deps/catch2-build/generated-includes"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/VST3_SDK"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/LV2_SDK"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lv2"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/serd"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sord"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sord/src"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sratom"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lilv"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/Users/jason/Documents/dev/gain-vst/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				10
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "gain-vst::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "Catch2::@fa92aa50e9bf5e1a7206"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "Catch2WithMain::@fa92aa50e9bf5e1a7206"
+		}
+	],
+	"id" : "gain-vst-tests::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "\"gain-vst_artefacts/Debug/libGain VST_SharedCode.a\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "_deps/catch2-build/src/libCatch2Maind.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker CoreAudioKit",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker DiscRecording",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker QuartzCore",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-weak_framework Metal",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "-weak_framework MetalKit",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker WebKit",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker CoreAudio",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker CoreMIDI",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker AudioToolbox",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker Cocoa",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker Foundation",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker IOKit",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker Security",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker Accelerate",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "_deps/catch2-build/src/libCatch2d.a",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "gain-vst-tests",
+	"nameOnDisk" : "gain-vst-tests",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 18,
+			"compileGroupIndex" : 0,
+			"path" : "Source/PluginTests.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 20,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/gain-vst-tests_artefacts/JuceLibraryCode/JuceHeader.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/gain-vst-tests_artefacts/JuceLibraryCode/JuceHeader.h.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_audio_utils/juce_audio_utils.mm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_audio_processors/juce_audio_processors.mm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_gui_extra/juce_gui_extra.mm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_gui_basics/juce_gui_basics.mm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 1,
+			"path" : "JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_graphics/juce_graphics.mm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_events/juce_events.mm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_core/juce_core_CompilationTime.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_core/juce_core.mm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_data_structures/juce_data_structures.mm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_audio_basics/juce_audio_basics.mm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_audio_formats/juce_audio_formats.mm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "JUCE/modules/juce_audio_devices/juce_audio_devices.mm",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}
